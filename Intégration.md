@@ -4,7 +4,7 @@
 
 Toute personne ayant touché aux mathématiques connaît l'intégrale. Dans sa forme la plus pure, celle imaginée par **Bernhard Riemann**, c'est une idée d'une beauté et d'une intuition saisissantes : l'aire sous une courbe. On la visualise, on la "sent". On découpe la base en une myriade de rectangles infiniment fins, on somme leurs aires, et la magie opère. 📏
 
-![1758841641593](image/Intégration_finale2/1758841641593.png)
+![1758841641593](image/Integration/1758841641593.png)
 
 Pourtant, cet outil si élégant, si fondamental, est aussi fragile. Face à des fonctions trop "sauvages", trop discontinues, l'édifice de Riemann s'effondre. Les sommes n'arrivent plus à se mettre d'accord, et le concept d'aire perd son sens. Illustrons concrètement cette défaillance avec un célèbre "monstre" mathématique : la **fonction de Dirichlet**, définie sur l'intervalle $[0,1]$. Son comportement est le chaos incarné :
 
@@ -18,7 +18,7 @@ $$
 
 Imaginez un peigne aux dents infiniment denses. Entre deux dents (deux nombres rationnels), il y a toujours une infinité de "trous" (des irrationnels), et entre deux trous, une infinité de dents. C'est l'image de cette fonction.
 
-![1758841698549](image/Intégration_finale2/1758841698549.png)
+![1758841698549](image/Integration/1758841698549.png)
 
 Pourquoi l'intégrale de Riemann reste-t-elle indécise face à elle ? Rappelons que Riemann nous demande de découper l'intervalle $[0,1]$ en petits segments et, sur chacun, de choisir un point pour dessiner un rectangle.
 
@@ -55,7 +55,7 @@ $$
 \text{Aire} \approx \sum_j \underbrace{y_j}_{\text{hauteur fixe}} \cdot \underbrace{\mu\{x \mid f(x) \approx y_j\}}_{\text{largeur variable}}
 $$
 
-![1758842768297](image/Intégration_finale2/1758842768297.png)
+![1758842768297](image/Integration/1758842768297.png)
 
 ---
 
@@ -100,7 +100,7 @@ $$
 f(x) = \frac{\sin(x)}{x}
 $$
 
-![1758842825147](image/Intégration_finale2/1758842825147.png)
+![1758842825147](image/Integration/1758842825147.png)
 
 L'intégrale impropre au sens de Riemann
 
@@ -156,7 +156,7 @@ La magie opère ici :
 - Si $X$ est continue, $F(x)$ est une courbe lisse, et l’on peut montrer que $\mathrm{d}F(x)$ devient $p(x)\,dx$ (où $p$ est la densité de probabilité) : on retrouve une intégrale de Lebesgue classique.
 - Si $X$ est discrète, $F(x)$ est une fonction en escalier. L'intégrale $\mathrm{d}F(x)$ "détecte" les sauts de l'escalier, et l'intégrale se transforme automatiquement en une somme pondérée par la hauteur des sauts, qui sont précisément les probabilités $\mathbb{P}(X=x_i)$ !
 
-![1758842881199](image/Intégration_finale2/1758842881199.png)
+![1758842881199](image/Integration/1758842881199.png)
 
 Toutefois cette intégrale est en essence, un cas particulier de la théorie plus générale de Lebesgue où l'on choisit une mesure $\mu$ qui n'est pas forcément la mesure de longueur standard (mesure Lebesgue classique). Dans cette vision plus générale, on s'autorise à prendre d'autre mesure comme celle de comptage dans le cas discret, percevant ainsi une somme comme une intégrale. L-S est ainsi le cas où cette mesure peut être construite à partir d'une fonction $g$. Ces mesures "constructibles" sont des exemples de mesures de Radon (ou mesures "gentilles"), qui sont bien comportées : finies sur les compacts et régulières.
 
@@ -170,7 +170,7 @@ La seconde voie est plus radicale et d'une subtilité folle. Elle ne part pas de
 
 Le défaut de Riemann était sa subdivision uniforme : la largeur de tous les rectangles devait être inférieure à un même $\delta$. Jaroslav Kurzweil et Ralph Henstock introduisent la jauge : une fonction $\delta(x)>0$ qui prescrit une tolérance **locale**, adaptée à chaque point $x$.
 
-![1758843050947](image/Intégration_finale2/1758843050947.png)
+![1758843050947](image/Integration/1758843050947.png)
 
 Près d'un point "difficile" où la fonction oscille beaucoup, on exige des rectangles très fins (on choisit un petit $\delta(x)$). Là où la fonction est sage et plate, on peut se permettre des rectangles larges (un grand $\delta(x)$).
 
@@ -233,7 +233,7 @@ C'est peut-être son plus grand succès. Pour K-H, le théorème est d'une puret
 
 Ce théorème s'applique même à des fonctions pathologiques comme la **dérivée de Volterra**. On peut construire une fonction $F(x)$ dérivable partout, dont la dérivée $f(x)=F'(x)$ est bornée mais n'est **ni Riemann-intégrable, ni Lebesgue-intégrable**. Une telle fonction peut être construite sur un **ensemble de Cantor "gras"** (un ensemble de type Cantor mais de mesure non nulle). Seule K-H redonne son plein pouvoir au lien entre dérivation et intégration.
 
-![1758843122051](image/Intégration_finale2/1758843122051.png)
+![1758843122051](image/Integration/1758843122051.png)
 
 #### ⚠️ Mais alors ...
 
@@ -299,10 +299,10 @@ Notre odyssée ne s'arrête pas là. Les mathématiques et la physique ont eu be
 
 - **L'Intégration Stochastique (Itô)** : pour intégrer le long des chemins aléatoires et non-différentiables du **mouvement Brownien**. Indispensable en finance, elle obéit à ses propres règles (Lemme d'Itô), où $({\rm d}W_t)^2 \neq 0$ !
 
-  ![1758843188181](image/Intégration_finale2/1758843188181.png)
+  ![1758843188181](image/Integration/1758843188181.png)
 - **L'Intégration Géométrique** : pour intégrer des **formes différentielles** sur des variétés courbes (sphères, tores...). Elle culmine avec le magnifique **Théorème de Stokes généralisé**, unifiant tous les grands théorèmes de l'analyse vectorielle.
 
-  ![1758843224310](image/Intégration_finale2/1758843224310.png)
+  ![1758843224310](image/Integration/1758843224310.png)
 - **L'Intégrale de Chemin de Feynman** : l'idée audacieuse et encore non formalisée rigoureusement de la physique quantique, qui consiste à "sommer" sur l'espace de toutes les histoires possibles d'une particule.
 - **L'Intégrale de Haar** : pour définir une "moyenne" invariante sur des groupes topologiques abstraits, socle de l'analyse harmonique moderne.
 
